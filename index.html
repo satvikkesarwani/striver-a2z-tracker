@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A2Z DSA Tracker — Striver's Sheet, Better</title>
+  <meta name="description" content="Striver's A2Z DSA sheet with direct LeetCode/GFG links, topic-wise and difficulty-wise progress tracking.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <span class="brand-bolt">⚡</span>
+        <div>
+          <h1>A2Z DSA Tracker</h1>
+          <p class="brand-sub">Striver's sheet · direct LeetCode / GFG links · no tuf console</p>
+        </div>
+      </div>
+      <div class="overall">
+        <div class="overall-label"><span id="overall-count">0 / 0</span> solved</div>
+        <div class="bar bar-lg"><div class="bar-fill fill-accent" id="overall-bar"></div></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="stats-grid" id="stats-grid">
+      <div class="stat-card easy">
+        <div class="stat-head"><span class="stat-name">Easy</span><span class="stat-count" id="easy-count">0 / 0</span></div>
+        <div class="bar"><div class="bar-fill fill-easy" id="easy-bar"></div></div>
+      </div>
+      <div class="stat-card medium">
+        <div class="stat-head"><span class="stat-name">Medium</span><span class="stat-count" id="medium-count">0 / 0</span></div>
+        <div class="bar"><div class="bar-fill fill-medium" id="medium-bar"></div></div>
+      </div>
+      <div class="stat-card hard">
+        <div class="stat-head"><span class="stat-name">Hard</span><span class="stat-count" id="hard-count">0 / 0</span></div>
+        <div class="bar"><div class="bar-fill fill-hard" id="hard-bar"></div></div>
+      </div>
+    </section>
+
+    <section class="controls">
+      <input type="search" id="search" placeholder="Search problems…  (e.g. kadane, LRU, MST)" autocomplete="off">
+      <div class="chips" id="diff-chips">
+        <button class="chip active" data-diff="all">All</button>
+        <button class="chip chip-easy" data-diff="Easy">Easy</button>
+        <button class="chip chip-medium" data-diff="Medium">Medium</button>
+        <button class="chip chip-hard" data-diff="Hard">Hard</button>
+      </div>
+      <label class="toggle">
+        <input type="checkbox" id="hide-done"> Hide solved
+      </label>
+    </section>
+
+    <section id="topics"></section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-actions">
+      <button id="export-btn" class="ghost-btn">Export progress</button>
+      <button id="import-btn" class="ghost-btn">Import progress</button>
+      <input type="file" id="import-file" accept="application/json" hidden>
+      <button id="reset-btn" class="ghost-btn danger">Reset all</button>
+    </div>
+    <p>Questions from <a href="https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2" target="_blank" rel="noopener">Striver's A2Z DSA Sheet</a>. Progress is saved in your browser (localStorage).</p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
